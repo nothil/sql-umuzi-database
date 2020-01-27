@@ -59,5 +59,5 @@ buy_price      decimal,
 
 -- #5 insert the data to the tables
 INSERT INTO Customer(Customer_ID, First_Name, Last_Name, Gender, Address, Phone, Email, City, Country ) VALUES
-    (1	'Charl'	'Mullar'	'MALE'	'2 WERNIRRING'	23456789	'charl@gmail.com'	'Springs'	'Germany');
+    (1	'Charl'	'Mullar'	'MALE'	'2 WERNIRRING'	23456789	'charl@gmail.com'	'berlin'	'Germany');
 ​
