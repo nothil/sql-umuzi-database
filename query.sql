@@ -1,44 +1,46 @@
 SELECT * FROM Customers;
-​
-SELECT firstname FROM Customers;
-​
-SELECT firstname FROM Customers WHERE Customerid=1;
 
-​UPDATE customers SET firstname = 'Nothile Ngcobo' WHERE customerid=1;
+SELECT first_Name FROM Customers;
 
-​DELETE FROM Customers WHERE Customerid=1;
-​
-SELECT COUNT(Status) FROM Orders;
-​
-SELECT MAX(Amount) FROM Payments;
-​
-SELECT * FROM Customers ORDER BY Country ASC;
-​
-SELECT * FROM products WHERE price BETWEEN '100' AND '600';
+SELECT first_Name FROM Customers WHERE customerid= 1;
+
+UPDATE Customers SET first_Name= 'nomvelo' WHERE customerid=1;
+
+DELETE FROM Customers WHERE customerid= 2;
+
+SELECT COUNT(parcelStatus) FROM orders;
+
+SELECT MAX(amount) FROM payments;
+
+SELECT * FROM Customers ORDER BY country ASC;
+
+SELECT * FROM products WHERE buyPrice BETWEEN 100 AND 600;
+
+SELECT * FROM Customers WHERE  city='Berlin' AND country='Germany';
+
+SELECT * FROM Customers WHERE city='Durban' or city='cape town';
 
 
-SELECT * FROM customers
-WHERE city='Berlin'
-AND country='Germany';
 
-SELECT * FROM Customers
-WHERE city='Cape Town'
-or city='durban';
-
-SELECT * FROM products
-WHERE buyprice > '500';
+SELECT * FROM products WHERE buyPrice > 500;
 
 SELECT SUM(amount) FROM payments;
+ 
+ SELECT COUNT(*) FROM orders 
+ WHERE parcelStatus='Shipped';
 
-SELECT count(*) FROM orders
-WHERE parcelStatus='Shipped';
+ SELECT AVG(buyPrice) FROM products;
 
-SELECT AVG(price) FROM products;
+ SELECT Customers.customerid,payments.paymentid 
+ FROM Customers 
+ INNER JOIN payments 
+ ON Customers.customerid=payments.customerid;
 
-SELECT customers.customerId, payments.paymentid
-FROM customers
-INNER JOIN payments
-ON customers.customerid = payments.customerid;
+ 
+ SELECT * FROM products
+ WHERE descriptions LIKE
+ 'Turnable front wheels%';
 
-SELECT * FROM products 
-WHERE descriptions LIKE 'Turnable front wheels%';
+
+
+

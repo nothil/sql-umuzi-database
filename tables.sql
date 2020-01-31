@@ -1,10 +1,10 @@
-
-DROP TABLE IF EXISTS Customers, products, employees, payments, orders;
+ 
+DROP TABLE IF EXISTS Customers, employees, payments, products, Orders;
 
 
 CREATE TABLE Customers(
 customerid     SERIAL PRIMARY KEY,
-firstname      VARCHAR (50),
+first_Name      VARCHAR (50),
 lastname       VARCHAR(50),
 gender          VARCHAR,
 addresses       VARCHAR(200),
@@ -17,7 +17,7 @@ country         VARCHAR(50)
 
 CREATE TABLE employees(
 employeeid     SERIAL primary key,
-firstname      VARCHAR(50),
+first_Name      VARCHAR(50),
 lastName       VARCHAR(50),
 email         VARCHAR,
 jobTitle       varchar
@@ -55,13 +55,13 @@ parcelStatus      VARCHAR(100)
 
 --#5 insert the data to the tables
 --INSERTING INTO TABLES
-INSERT INTO customers(customerid,firstname,lastname,gender,addresses,phone,email,city,country)
+INSERT INTO customers(customerid,first_Name,lastname,gender,addresses,phone,email,city,country)
                   VALUES(1, 'John','Hibert','Male','284 chaucer st',084789657,'john@gmail.com','Johannesburg','South'),
                         (2, 'Thando','Sithole','Female','240 Sect 1',0794445584,'thando@gmail.com','Cape Town','South Africa'),
                         (3, 'Leon','Glen','Male','81 Everton Rd,Gillits',0820832830,'Leon@gmail.com','Durban','South Africa'),
                         (4, 'Charl','Muller','Mal','290A Dorset Ecke',+44856872553,'Charl.muller@yahoo.com','Berlin','Germany'),
                         (5, 'Julia','Stein','Female','2 Wernerring',+448672445058,'Js234@yahoo.com','Frankfurt','Germany');
-INSERT INTO employees(employeeId,firstName,lastname,email,jobtitle)
+INSERT INTO employees(employeeId,first_Name,lastname,email,jobtitle)
             VALUES(1,'Kani','Matthew','mat@gmail.com','Manager'),
                   (2,'Lesly','Cronje','LesC@gmail.com','Clerk'),
                   (3,'Gideon','Maduku','m@gmail.com','Accountant');
