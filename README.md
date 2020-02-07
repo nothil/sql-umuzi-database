@@ -1,1 +1,1 @@
-# node-umuzi-database
+# SQL-umuzi-database
